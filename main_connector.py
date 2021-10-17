@@ -18,10 +18,14 @@ except mysql.connector.Error as err:
     else:
         print(err)
 
-cursor = cnx.cursor()
-query = 'select * from customers'
+# cursor = cnx.cursor()
+#query = 'select * from customers'
 
 # testing the cursor
-cursor.execute(query)
-table_rows = cursor.fetchall()
-print(table_rows)
+# cursor.execute(query)
+# table_rows = cursor.fetchall()
+
+# reading country specific data using Pandas
+df = pd.read_sql_query('select * from customers', con=cnx,  index_col='Customer_Id')
+print(df.loc[df['Country'] == 'IND'])
+

@@ -1,0 +1,4 @@
+Customer_Id,Customer_Name,Open_Date,Last_Consult_date,Vaccination_Id,Dr_Name,State,Country,DOB,Is_Active
+123459,Mathew,2010-10-12,2012-10-13,MVD,Paul,WAS,PHIL,2010-10-12,A
+128970,Bruce,2010-10-12,2012-10-13,MVD,Paul,WAS,PHIL,2010-10-12,A
+128971,Tony,2010-10-12,2012-10-13,MVD,Paul,WAS,PHIL,2010-10-12,A

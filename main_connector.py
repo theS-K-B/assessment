@@ -8,7 +8,7 @@ try:
         user     = 'root',
         password = '12345',
         host     = '127.0.0.1',
-        database = 'test_db'
+        database = 'demo_db'
     )
 except mysql.connector.Error as err:
     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
@@ -17,3 +17,11 @@ except mysql.connector.Error as err:
         print("Database does not exist")
     else:
         print(err)
+
+cursor = cnx.cursor()
+query = 'select * from customers'
+
+# testing the cursor
+cursor.execute(query)
+table_rows = cursor.fetchall()
+print(table_rows)
